@@ -1,0 +1,264 @@
+/* Umumiy sozlamalar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Konteynerlar */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0077cc;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffdd57;
+}
+
+/* Til tanlash */
+.language-selector {
+  background: #eee;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.language-selector select,
+.language-selector button {
+  padding: 0.3rem 0.5rem;
+  margin-left: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Header */
+.main-header {
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.main-header h1 {
+  font-size: 2.5rem;
+}
+
+.main-header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Xizmat kartochkalari */
+.cards {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.cards h2 {
+  margin-bottom: 2rem;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0077cc;
+}
+
+/* Aloqa shakli */
+.contact {
+  padding: 2rem 0;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input,
+.contact textarea,
+.feedback-section textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact button,
+.feedback-section button,
+.payment-button {
+  padding: 0.8rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact button:hover,
+.feedback-section button:hover,
+.payment-button:hover {
+  background-color: #005fa3;
+}
+
+/* Ijtimoiy tarmoq havolalari */
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* To‘lov bo‘limi */
+.payment {
+  padding: 2rem 0;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.payment-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+}
+
+/* Fikr */
+.feedback-section {
+  padding: 2rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Moslashuvchanlik */
+@media (max-width: 768px) {
+  .card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+.youtube-button-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.youtube-button-section .btn {
+  padding: 14px 28px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.youtube-button-section .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.youtube-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #845EC2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.youtube-button:hover {
+  background-color: #6A1B9A;
+}
+
+
+
+

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ibrohimbekning shaxsiy sayti - Telegram premium xizmatlari, HTML/CSS bo‘yicha ma’lumotlar va aloqa shakli." />
+  <meta name="keywords" content="Ibrohimbek, Telegram premium, HTML, CSS, Hammasi yaxshilikka, saytingizni yaratish" />
+  <meta name="author" content="Ibrohimbek" />
+  <title>Ibrohimbekning Sayti</title>
+  <link rel="icon" type="image/png" href="a59465bc-6ed2-4075-82e7-828b89b95b3b.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Silliq fon o'zgarishi uchun transition */
+    body {
+      transition: background 1s ease;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      /* Agar style.css faylida fon bo'lsa, bu ustunlik beradi */
+      background: linear-gradient(45deg, #FF6B6B, #FFD93D);
+    }
+  </style>
+</head>
+<body>
+<div id="clock" style="font-size: 24px; font-weight: bold; margin: 10px 0;"></div>
+<script>
+  function updateClock() {
+    const now = new Date();
+    const clock = document.getElementById("clock");
+    clock.innerText = now.toLocaleTimeString();
+  }
+setInterval(updateClock, 1000);
+  updateClock(); // dastlabki yuklanishda
+</script>
+<div class="language-selector">
+  <form onsubmit="changeLanguage(); return false;">
+    <select id="language">
+      <option value="uz.html" selected>O'zbekcha</option>
+      <option value="ru.html">Русский</option>
+      <option value="en.html">English</option>
+      <option value="ar.html">العربية</option>  <!-- Bu qatorda arabcha til qo‘shildi -->
+    </select>
+    <button type="submit">Tanlash</button>
+  </form>
+</div>
+
+
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">Ibrohimbek Xizmatlari</div>
+    <ul class="nav-links">
+      <li><a href="#">Bosh sahifa</a></li>
+      <li><a href="#xizmatlar">Xizmatlar</a></li>
+      <li><a href="#aloqa">Aloqa</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="main-header">
+  <div class="container">
+    <h1>Assalomu alaykum!</h1>
+    <p>"Hammasi yaxshilikka" jamoasi tomonidan taqdim etilgan xizmatlar sayti</p>
+  </div>
+</header>
+
+<section id="xizmatlar" class="cards container">
+  <h2>Xizmatlar</h2>
+  <div class="card-wrapper">
+    <div class="card"><i class="fas fa-code"></i><h3>1</h3><p>Barcha masofadan turib qulay xizmatlar: treydingchilar uchun shaxsiy hisobga pul tushiramiz</p></div>
+    <div class="card"><i class="fas fa-paint-brush"></i><h3>2</h3><p>Pubg, Mobile Legends, Call of Duty va barcha o'yinlar uchun pul tushirish</p></div>
+    <div class="card"><i class="fas fa-rocket"></i><h3>3</h3><p>Telegram preimum, kanal uchun logo va suratlar yaratish</p></div>
+    <div class="card"><i class="fas fa-robot"></i><h3>4</h3><p>Buyurtmalar, a’zolik tizimi, avtomatik javoblar uchun bot yaratib beramiz.</p><button onclick="openModal('modal-bot')">Batafsil</button></div>
+    <div class="card"><i class="fas fa-palette"></i><h3>5</h3><p>Instagram, logotip, banner va boshqa dizaynlar — kreativ va sifatli.</p><button onclick="openModal('modal-design')">Batafsil</button></div>
+  
+    <div class="card">
+      <i class="fas fa-plane-departure"></i>
+      <h3>Arzon Aviachiptalar</h3>
+      <p>Dunyoning istalgan nuqtasiga eng arzon narxlarda aviachiptalarni topib, olib beramiz. Tez va ishonchli xizmat!</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-university"></i>
+      <h3>Universitetga Topsirish Xizmati</h3>
+      <p>Recommendation letter, CV tayyorlab beramiz. Germaniya, Amerika va boshqa ko‘plab davlatlardagi nufuzli universitetlarga hujjat topshirishingizda yordam beramiz.</p>
+    </div>
+    <section class="youtube-button-section container">
+  <h2>Video Lavhalar</h2>
+  <a href="videolar.html" class="btn">Hammasi yaxshilikka jamoasi YouTube videolari</a>
+</section>
+
+
+  </div>
+</section>
+
+<section id="aloqa" class="contact container">
+  <h2>Aloqa</h2>
+  <form action="https://formspree.io/f/mnndwooj" method="POST">
+    <input type="text" name="name" placeholder="Ismingiz" required />
+    <input type="email" name="email" placeholder="Email manzilingiz" required />
+    <textarea name="message" placeholder="Xabaringiz..." required></textarea>
+    <button type="submit">Yuborish</button>
+  </form>
+  <div class="social-links">
+    <p>Quyidagi tarmoqlar orqali ham bog‘lanishingiz mumkin:</p>
+    <a href="https://t.me/Muxtoryat_ul_Turkiston" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="sms:+998901551675"><i class="fas fa-sms"></i> SMS</a>
+  </div>
+</section>
+
+<section class="payment container">
+  <h2>To‘lov usullari</h2>
+  <p><i class="fas fa-credit-card"></i> UzCard: <strong>5614 6818 1952 6504</strong></p>
+  <p><i class="fas fa-university"></i> Humo: <strong>4008 4700 4250 6716</strong></p>
+  <a href="https://payme.uz" target="_blank" class="payment-button"><i class="fas fa-wallet"></i> Payme orqali to‘lash</a>
+</section>
+
+<section class="feedback-section container">
+  <h2>Sayt haqida fikringiz</h2>
+  <form action="https://formspree.io/f/mnndwooj" method="POST">
+    <textarea name="feedback" rows="4" placeholder="Fikringizni yozing..."></textarea>
+    <button type="submit">Yuborish</button>
+  </form>
+</section>
+
+<!-- Modals -->
+<div id="modal-bot" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-bot')">&times;</span>
+    <h3>Telegram Bot Xizmati</h3>
+    <p>✅ Maxsus funksiyali botlar (admin panel, buyurtma qabul qilish)<br>✅ Narxi: 40 000 so‘mdan boshlab<br>✅ 1-2 kun ichida tayyorlab beriladi</p>
+  </div>
+</div>
+
+<div id="modal-design" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-design')">&times;</span>
+    <h3>Grafik Dizayn Xizmati</h3>
+    <p>🎨 Instagram post, logotip, banner, afisha va boshqalar<br>💰 Narxlar: 30 000 so‘mdan<br>📦 Formatlar: PNG, JPG, PDF (ixtiyoriy)</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Hammasi yaxshilikka jamoasi. Barcha huquqlar himoyalangan.</p>
+  </div>
+</footer>
+
+<script>
+  function changeLanguage() {
+    const langPage = document.getElementById("language").value;
+    window.location.href = langPage;
+  }
+
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(function(modal) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+
+  // Fon ranglari ro'yxati (gradientlar bilan)
+  const backgrounds = [
+    "linear-gradient(45deg, #FF6B6B, #FFD93D)",
+    "linear-gradient(45deg, #6BCB77, #4D96FF)",
+    "linear-gradient(45deg, #FF9F1C, #FF4040)",
+    "linear-gradient(45deg, #845EC2, #D65DB1)",
+    "linear-gradient(45deg, #0081CF, #00C2FF)",
+    "linear-gradient(45deg, #FF6F91, #FF9671)"
+  ];
+
+  let currentIndex = 0;
+  const body = document.body;
+
+  function changeBackground() {
+    body.style.background = backgrounds[currentIndex];
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+  }
+
+  // Dastlabki fonni o'rnatish
+  changeBackground();
+
+  // Har 5 soniyada fonni o'zgartirish
+  setInterval(changeBackground, 5000);
+</script>
+
+</body>
+</html>
+
+
+

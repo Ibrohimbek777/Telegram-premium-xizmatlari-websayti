@@ -1,0 +1,142 @@
+<!-- en.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ibrohimbek's personal site - Telegram Premium services, HTML/CSS info and contact form.">
+  <title>Ibrohimbek's Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="language-selector">
+  <form onsubmit="changeLanguage(); return false;">
+    <select id="language">
+      <option value="uz.html">O'zbekcha</option>
+      <option value="ru.html">Русский</option>
+      <option value="en.html" selected>English</option>
+    </select>
+    <button type="submit">Select</button>
+  </form>
+</div>
+
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">Ibrohimbek Services</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#xizmatlar">Services</a></li>
+      <li><a href="#aloqa">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="main-header">
+  <div class="container">
+    <h1>Hello!</h1>
+    <p>A service site provided by the “Everything for Good” team</p>
+  </div>
+</header>
+
+<section id="xizmatlar" class="cards container">
+  <h2>Services</h2>
+  <div class="card-wrapper">
+    <div class="card"><i class="fas fa-code"></i><h3>1</h3><p>Remote money transfer services for traders</p></div>
+    <div class="card"><i class="fas fa-paint-brush"></i><h3>2</h3><p>Top-up for PUBG, Mobile Legends, Call of Duty, and more</p></div>
+    <div class="card"><i class="fas fa-rocket"></i><h3>3</h3><p>Telegram Premium, channel logos and image creation</p></div>
+    <div class="card"><i class="fas fa-robot"></i><h3>4</h3><p>Bot creation for orders, memberships, and auto replies</p><button onclick="openModal('modal-bot')">More</button></div>
+    <div class="card"><i class="fas fa-palette"></i><h3>5</h3><p>Instagram posts, logos, banners — creative and quality design</p><button onclick="openModal('modal-design')">More</button></div>
+    <div class="card">
+      <i class="fas fa-plane-departure"></i>
+      <h3>Cheap Air Tickets</h3>
+      <p>We find and provide affordable tickets worldwide — fast and reliable service!</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-university"></i>
+      <h3>University Application Support</h3>
+      <p>We help with recommendation letters and CVs for top universities in Germany, USA, and more.</p>
+    </div>
+  </div>
+</section>
+
+<section id="aloqa" class="contact container">
+  <h2>Contact</h2>
+  <form action="https://formspree.io/f/mnndwooj" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <div class="social-links">
+    <p>You can also contact via:</p>
+    <a href="https://t.me/Muxtoryat_ul_Turkiston" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="sms:+998901551675"><i class="fas fa-sms"></i> SMS</a>
+  </div>
+</section>
+
+<section class="payment container">
+  <h2>Payment Methods</h2>
+  <p><i class="fas fa-credit-card"></i> UzCard: <strong>5614 6818 1952 6504</strong></p>
+  <p><i class="fas fa-university"></i> Humo: <strong>4008 4700 4250 6716</strong></p>
+  <a href="https://payme.uz" target="_blank" class="payment-button"><i class="fas fa-wallet"></i> Pay with Payme</a>
+</section>
+
+<section class="feedback-section container">
+  <h2>Your Feedback</h2>
+  <form action="https://formspree.io/f/mnndwooj" method="POST">
+    <textarea name="feedback" rows="4" placeholder="Write your thoughts..."></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- Modals -->
+<div id="modal-bot" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-bot')">&times;</span>
+    <h3>Telegram Bot Service</h3>
+    <p>✅ Custom bot functions (admin panel, order system)<br>✅ Price: from 40,000 UZS<br>✅ Delivered in 1-2 days</p>
+  </div>
+</div>
+
+<div id="modal-design" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-design')">&times;</span>
+    <h3>Graphic Design Service</h3>
+    <p>🎨 Instagram posts, logos, banners, posters<br>💰 Prices: from 30,000 UZS<br>📦 Formats: PNG, JPG, PDF</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Everything for Good team. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function changeLanguage() {
+    const langPage = document.getElementById("language").value;
+    window.location.href = langPage;
+  }
+
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(function(modal) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+</script>
+
+</body>
+</html>

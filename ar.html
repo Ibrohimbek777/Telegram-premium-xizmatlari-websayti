@@ -1,0 +1,150 @@
+<!-- ar.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="موقع إبرهيم بيك الشخصي - خدمات تيليجرام بريميوم، معلومات HTML/CSS ونموذج الاتصال." />
+  <title>موقع إبرهيم بيك</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      direction: rtl;
+      text-align: right;
+    }
+    /* Agar kerak bo‘lsa, nav-link va boshqa elementlarga ham RTL uchun maxsus style qo‘shing */
+  </style>
+</head>
+<body>
+
+<div class="language-selector">
+  <form onsubmit="changeLanguage(); return false;">
+    <select id="language">
+      <option value="uz.html">الأوزبكية</option>
+      <option value="ru.html">الروسية</option>
+      <option value="en.html">الإنجليزية</option>
+      <option value="ar.html" selected>العربية</option>
+    </select>
+    <button type="submit">اختيار</button>
+  </form>
+</div>
+
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">خدمات إبرهيم بيك</div>
+    <ul class="nav-links">
+      <li><a href="#">الرئيسية</a></li>
+      <li><a href="#xizmatlar">الخدمات</a></li>
+      <li><a href="#aloqa">اتصل بنا</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="main-header">
+  <div class="container">
+    <h1>مرحبًا!</h1>
+    <p>موقع خدمات فريق "كل شيء للخير"</p>
+  </div>
+</header>
+
+<section id="xizmatlar" class="cards container">
+  <h2>الخدمات</h2>
+  <div class="card-wrapper">
+    <div class="card"><i class="fas fa-code"></i><h3>1</h3><p>خدمات تحويل الأموال عن بعد للمتداولين</p></div>
+    <div class="card"><i class="fas fa-paint-brush"></i><h3>2</h3><p>شحن رصيد PUBG، Mobile Legends، Call of Duty والمزيد</p></div>
+    <div class="card"><i class="fas fa-rocket"></i><h3>3</h3><p>تيليجرام بريميوم، شعارات القنوات وإنشاء الصور</p></div>
+    <div class="card"><i class="fas fa-robot"></i><h3>4</h3><p>إنشاء بوت للطلبات والعضويات والردود التلقائية</p><button onclick="openModal('modal-bot')">المزيد</button></div>
+    <div class="card"><i class="fas fa-palette"></i><h3>5</h3><p>تصاميم منشورات إنستغرام، شعارات، لافتات — تصميم إبداعي وعالي الجودة</p><button onclick="openModal('modal-design')">المزيد</button></div>
+    <div class="card">
+      <i class="fas fa-plane-departure"></i>
+      <h3>تذاكر طيران رخيصة</h3>
+      <p>نجد ونوفر تذاكر بأسعار معقولة حول العالم — خدمة سريعة وموثوقة!</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-university"></i>
+      <h3>دعم التقديم للجامعات</h3>
+      <p>نساعد في خطابات التوصية والسير الذاتية للجامعات الرائدة في ألمانيا والولايات المتحدة والمزيد.</p>
+    </div>
+  </div>
+</section>
+
+<section id="aloqa" class="contact container">
+  <h2>اتصل بنا</h2>
+  <form action="https://formspree.io/f/mnndwooj" method="POST">
+    <input type="text" name="name" placeholder="اسمك" required />
+    <input type="email" name="email" placeholder="بريدك الإلكتروني" required />
+    <textarea name="message" placeholder="اكتب رسالتك..." required></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+  <div class="social-links">
+    <p>يمكنك أيضاً التواصل عبر:</p>
+    <a href="https://t.me/Muxtoryat_ul_Turkiston" target="_blank"><i class="fab fa-telegram"></i> تيليجرام</a>
+    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> إنستغرام</a>
+    <a href="sms:+998901551675"><i class="fas fa-sms"></i> رسالة نصية</a>
+  </div>
+</section>
+
+<section class="payment container">
+  <h2>طرق الدفع</h2>
+  <p><i class="fas fa-credit-card"></i> أوزكارد: <strong>5614 6818 1952 6504</strong></p>
+  <p><i class="fas fa-university"></i> هومو: <strong>4008 4700 4250 6716</strong></p>
+  <a href="https://payme.uz" target="_blank" class="payment-button"><i class="fas fa-wallet"></i> الدفع عبر Payme</a>
+</section>
+
+<section class="feedback-section container">
+  <h2>ملاحظاتك</h2>
+  <form action="https://formspree.io/f/mnndwooj" method="POST">
+    <textarea name="feedback" rows="4" placeholder="اكتب أفكارك..."></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+</section>
+
+<!-- النوافذ المنبثقة -->
+<div id="modal-bot" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-bot')">&times;</span>
+    <h3>خدمة بوت تيليجرام</h3>
+    <p>✅ بوت مخصص مع وظائف (لوحة إدارة، نظام طلبات)<br>✅ السعر: من 40,000 سوم<br>✅ التسليم خلال 1-2 يوم</p>
+  </div>
+</div>
+
+<div id="modal-design" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-design')">&times;</span>
+    <h3>خدمة التصميم الجرافيكي</h3>
+    <p>🎨 منشورات إنستغرام، شعارات، لافتات، ملصقات<br>💰 الأسعار: من 30,000 سوم<br>📦 الصيغ: PNG, JPG, PDF</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 فريق "كل شيء للخير". جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<script>
+  function changeLanguage() {
+    const langPage = document.getElementById("language").value;
+    window.location.href = langPage;
+  }
+
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(function(modal) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+</script>
+
+</body>
+</html>

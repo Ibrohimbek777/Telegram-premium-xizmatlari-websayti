@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Videolar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .video-item {
+            width: 320px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+        }
+        iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+        }
+        .video-title {
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 25px;
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <a href="video.html" class="back-button">Orqaga</a>
+    <h1>Hammasi yaxshilikka jamoasi YouTube videolari</h1>
+    <div class="video-container">
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/mSMyMUTuxsU" allowfullscreen></iframe>
+            <div class="video-title">Video 1</div>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/t6ENeVuVTl0" allowfullscreen></iframe>
+            <div class="video-title">Video 2</div>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/mj9KUL7W7AY" allowfullscreen></iframe>
+            <div class="video-title">Video 3</div>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/tPHPzisMVto" allowfullscreen></iframe>
+            <div class="video-title">Video 4</div>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/fn3Rni38sp8" allowfullscreen></iframe>
+            <div class="video-title">Video 5</div>
+        </div>
+    </div>
+</body>
+</html>
+
+

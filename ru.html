@@ -1,0 +1,175 @@
+<!-- ru.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Персональный сайт Иброхимбека — услуги Telegram Premium, информация об HTML/CSS и форма связи.">
+  <title>Сайт Иброхимбека</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      transition: background 1s ease;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #FF6B6B, #FFD93D);
+    }
+  </style>
+</head>
+<body>
+
+<div class="language-selector">
+  <form onsubmit="changeLanguage(); return false;">
+    <select id="language">
+      <option value="uz.html">O'zbekcha</option>
+      <option value="ru.html" selected>Русский</option>
+      <option value="en.html">English</option>
+    </select>
+    <button type="submit">Выбрать</button>
+  </form>
+</div>
+
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">Услуги Иброхимбека</div>
+    <ul class="nav-links">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#xizmatlar">Услуги</a></li>
+      <li><a href="#aloqa">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="main-header">
+  <div class="container">
+    <h1>Здравствуйте!</h1>
+    <p>Сайт услуг от команды «Всё к лучшему»</p>
+  </div>
+</header>
+
+<section id="xizmatlar" class="cards container">
+  <h2>Услуги</h2>
+  <div class="card-wrapper">
+    <div class="card"><i class="fas fa-code"></i><h3>1</h3><p>Услуги по переводу денег для трейдеров удалённо</p></div>
+    <div class="card"><i class="fas fa-paint-brush"></i><h3>2</h3><p>Пополнение PUBG, Mobile Legends, Call of Duty и других игр</p></div>
+    <div class="card"><i class="fas fa-rocket"></i><h3>3</h3><p>Telegram Premium, создание логотипов и изображений для каналов</p></div>
+    <div class="card"><i class="fas fa-robot"></i><h3>4</h3><p>Создание ботов для заказов, членства и автоответов</p><button onclick="openModal('modal-bot')">Подробнее</button></div>
+    <div class="card"><i class="fas fa-palette"></i><h3>5</h3><p>Дизайны для Instagram, логотипы, баннеры — креативно и качественно</p><button onclick="openModal('modal-design')">Подробнее</button></div>
+    <div class="card">
+      <i class="fas fa-plane-departure"></i>
+      <h3>Дешевые авиабилеты</h3>
+      <p>Находим и предоставляем дешевые билеты по всему миру. Быстро и надёжно!</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-university"></i>
+      <h3>Подача в университет</h3>
+      <p>Подготовим рекомендательное письмо и резюме. Поможем с поступлением в ведущие университеты Германии, США и других стран.</p>
+    </div>
+  </div>
+</section>
+
+<section id="aloqa" class="contact container">
+  <h2>Контакты</h2>
+  <form action="https://formspree.io/f/mnndwooj" method="POST">
+    <input type="text" name="name" placeholder="Ваше имя" required />
+    <input type="email" name="email" placeholder="Ваш Email" required />
+    <textarea name="message" placeholder="Ваше сообщение..." required></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+  <div class="social-links">
+    <p>Свяжитесь также через:</p>
+    <a href="https://t.me/Muxtoryat_ul_Turkiston" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="sms:+998901551675"><i class="fas fa-sms"></i> SMS</a>
+  </div>
+</section>
+
+<section class="payment container">
+  <h2>Способы оплаты</h2>
+  <p><i class="fas fa-credit-card"></i> UzCard: <strong>5614 6818 1952 6504</strong></p>
+  <p><i class="fas fa-university"></i> Humo: <strong>4008 4700 4250 6716</strong></p>
+  <a href="https://payme.uz" target="_blank" class="payment-button"><i class="fas fa-wallet"></i> Оплатить через Payme</a>
+</section>
+
+<section class="feedback-section container">
+  <h2>Ваше мнение о сайте</h2>
+  <form action="https://formspree.io/f/mnndwooj" method="POST">
+    <textarea name="feedback" rows="4" placeholder="Напишите ваш отзыв..."></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+</section>
+
+<!-- Modals -->
+<div id="modal-bot" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-bot')">&times;</span>
+    <h3>Услуга Telegram-бота</h3>
+    <p>✅ Боты с особыми функциями (панель администратора, приём заказов)<br>✅ Цена: от 40 000 сумов<br>✅ Готовность за 1–2 дня</p>
+  </div>
+</div>
+
+<div id="modal-design" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal-design')">&times;</span>
+    <h3>Услуга графического дизайна</h3>
+    <p>🎨 Посты в Instagram, логотипы, баннеры, афиши и другое<br>💰 Цена: от 30 000 сумов<br>📦 Форматы: PNG, JPG, PDF</p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Команда «Всё к лучшему». Все права защищены.</p>
+  </div>
+</footer>
+
+<script>
+  function changeLanguage() {
+    const langPage = document.getElementById("language").value;
+    window.location.href = langPage;
+  }
+
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(function(modal) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+
+  // Фоновые градиенты
+  const backgrounds = [
+    "linear-gradient(45deg, #FF6B6B, #FFD93D)",
+    "linear-gradient(45deg, #6BCB77, #4D96FF)",
+    "linear-gradient(45deg, #FF9F1C, #FF4040)",
+    "linear-gradient(45deg, #845EC2, #D65DB1)",
+    "linear-gradient(45deg, #0081CF, #00C2FF)",
+    "linear-gradient(45deg, #FF6F91, #FF9671)"
+  ];
+
+  let currentIndex = 0;
+  const body = document.body;
+
+  function changeBackground() {
+    body.style.background = backgrounds[currentIndex];
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+  }
+
+  changeBackground();
+  setInterval(changeBackground, 5000);
+</script>
+
+</body>
+</html>
+
